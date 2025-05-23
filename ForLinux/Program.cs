@@ -30,6 +30,7 @@ var summaries = new[]
 
 app.MapGet("/weatherforecast", () =>
     {
+        Console.WriteLine("WEATHER FORECAST REQUEST");
         var forecast = Enumerable.Range(1, 5).Select(index =>
                 new WeatherForecast
                 (
@@ -47,6 +48,7 @@ app.UseCors("AllowAll");
 
 app.MapGet("/products", () =>
 {
+    Console.WriteLine("PRODUCTS REQUEST");
     var products = new[]
     {
         new Product(1, "Laptop", 999.99m, "Electronics"),
